@@ -3,8 +3,6 @@ import BasicOfProgramming from '../models/BasicOfProgramming.js'
 const getBasicsOfProgramming = async (req, res) => {
   const basicsOfProgramming = await BasicOfProgramming.find({})
 
-  console.log(basicsOfProgramming)
-
   res.json(basicsOfProgramming)
 }
 
