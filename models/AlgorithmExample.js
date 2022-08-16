@@ -13,6 +13,9 @@ const algorithmExampleSchema = mongoose.Schema(
     debuggerContent: {
       type: String,
     },
+    extraContent: {
+      type: String,
+    },
   },
   {
     timestamps: true,
