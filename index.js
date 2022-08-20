@@ -6,6 +6,7 @@ import algorithmExampleRoutes from './routes/algorithmExampleRoutes.js'
 import quizRoutes from './routes/quizRoutes.js'
 import algorithmYourselfRoutes from './routes/algorithmYourselfRoutes.js'
 import cardsRoutes from './routes/cardsRoutes.js'
+import boxesRoutes from './routes/boxesRoutes.js'
 import connectDB from './config/db.js'
 
 const app = express()
@@ -39,6 +40,7 @@ app.use('/api/algorithm-example', algorithmExampleRoutes)
 app.use('/api/quiz', quizRoutes)
 app.use('/api/algorithm-yourself', algorithmYourselfRoutes)
 app.use('/api/cards', cardsRoutes)
+app.use('/api/boxes', boxesRoutes)
 
 const PORT = process.env.PORT || 4000
 
