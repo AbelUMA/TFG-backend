@@ -4,6 +4,7 @@ import cors from 'cors'
 import basicsOfProgrammingRoutes from './routes/basicOfProgrammingRoutes.js'
 import algorithmExampleRoutes from './routes/algorithmExampleRoutes.js'
 import quizRoutes from './routes/quizRoutes.js'
+import algorithmYourselfRoutes from './routes/algorithmYourselfRoutes.js'
 import connectDB from './config/db.js'
 
 const app = express()
@@ -35,6 +36,7 @@ app.use(cors(corsOptions))
 app.use('/api/basics-of-programming', basicsOfProgrammingRoutes)
 app.use('/api/algorithm-example', algorithmExampleRoutes)
 app.use('/api/quiz', quizRoutes)
+app.use('/api/algorithm-yourself', algorithmYourselfRoutes)
 
 const PORT = process.env.PORT || 4000
 
