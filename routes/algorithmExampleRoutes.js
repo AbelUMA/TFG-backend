@@ -1,4 +1,5 @@
 import express from 'express'
+import checkAuth from '../controllers/middleware/checkAuth.js'
 import {
   getAlgorithmExample,
   addAlgorithmExample,
@@ -6,7 +7,7 @@ import {
 
 const router = express.Router()
 
-router.get('/', getAlgorithmExample)
-router.post('/', addAlgorithmExample)
+router.get('/', checkAuth, getAlgorithmExample)
+router.post('/', checkAuth, addAlgorithmExample)
 
 export default router
