@@ -1,7 +1,7 @@
 import Card from '../models/Card.js'
 
 const getCards = async (req, res) => {
-  const cards = await Card.find({})
+  const cards = await Card.find().where('type').equals(req.query.type)
 
   res.json(cards)
 }

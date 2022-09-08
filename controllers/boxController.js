@@ -1,7 +1,7 @@
 import Box from '../models/Box.js'
 
 const getBoxes = async (req, res) => {
-  const boxes = await Box.find({})
+  const boxes = await Box.find().where('type').equals(req.query.type)
 
   res.json(boxes)
 }
