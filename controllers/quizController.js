@@ -2,8 +2,10 @@ import Quiz from '../models/Quiz.js'
 
 const getQuiz = async (req, res) => {
   const quiz = await Quiz.find({})
+  quiz.sort(() => 0.5 - Math.random())
+  const tenQuiz = quiz.slice(0, 10)
 
-  res.json(quiz)
+  res.json(tenQuiz)
 }
 
 const addQuiz = async (req, res) => {
